@@ -118,3 +118,14 @@ hashmap.c:46:15: error: comparison between pointer and integer [-Werror]
 cc1: all warnings being treated as errors
 Compilation failed
 299301f
+Sun Apr 10 21:19:52 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:46:11: error: ‘buckets’ undeclared (first use in this function)
+     while(buckets[pos] != NULL){
+           ^~~~~~~
+hashmap.c:46:11: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+a4e66b5
