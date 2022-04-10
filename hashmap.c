@@ -55,7 +55,7 @@ HashMap * createMap(long capacity) {
   HashMap* aux = (HashMap*)calloc(capacity, sizeof(HashMap*));
 
   int i;
-  for (i = 0; i < capacity; i++){
+  for (i = 0; i < capacity-1; i++){
         aux->buckets[i] = NULL;
   }
   
