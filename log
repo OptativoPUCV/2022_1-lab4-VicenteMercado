@@ -107,3 +107,14 @@ hashmap.c:43:7: error: unused variable ‘pos’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 5190faf
+Sun Apr 10 21:19:31 UTC 2022: 
+ hashmap.c | 12 ++++++++----
+ 1 file changed, 8 insertions(+), 4 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:46:15: error: comparison between pointer and integer [-Werror]
+     while(pos != NULL){
+               ^~
+cc1: all warnings being treated as errors
+Compilation failed
+299301f
