@@ -2,3 +2,35 @@ Sun Apr 10 19:07:52 UTC 2022:
  tests:  0|6
 total_score: 0/70
 70b155c
+Sun Apr 10 20:21:47 UTC 2022: 
+ hashmap.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘createMap’:
+hashmap.c:55:3: error: unknown type name ‘Hashmap’; did you mean ‘HashMap’?
+   Hashmap* aux = (Hashmap*)malloc(capacity * sizeof(Hashmap));
+   ^~~~~~~
+   HashMap
+hashmap.c:55:19: error: ‘Hashmap’ undeclared (first use in this function); did you mean ‘HashMap’?
+   Hashmap* aux = (Hashmap*)malloc(capacity * sizeof(Hashmap));
+                   ^~~~~~~
+                   HashMap
+hashmap.c:55:19: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:55:27: error: expected expression before ‘)’ token
+   Hashmap* aux = (Hashmap*)malloc(capacity * sizeof(Hashmap));
+                           ^
+hashmap.c:56:6: error: request for member ‘buckets’ in something not a structure or union
+   aux->buckets = (Pair*)calloc(capacity, sizeof(Hashmap*));
+      ^~
+hashmap.c:56:57: error: expected expression before ‘)’ token
+   aux->buckets = (Pair*)calloc(capacity, sizeof(Hashmap*));
+                                                         ^
+hashmap.c:59:6: error: request for member ‘current’ in something not a structure or union
+   aux->current = -1;
+      ^~
+hashmap.c:61:10: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+   return aux;
+          ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+ba9c0d1
