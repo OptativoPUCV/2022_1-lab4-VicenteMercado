@@ -96,3 +96,14 @@ hashmap.c:43:7: error: unused variable ‘pos’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 3bee40d
+Sun Apr 10 21:13:17 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:43:7: error: unused variable ‘pos’ [-Werror=unused-variable]
+   int pos = hash(key, map->capacity);
+       ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+5190faf
