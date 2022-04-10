@@ -168,3 +168,14 @@ Sun Apr 10 23:46:04 UTC 2022:
  tests:  9|3
 total_score: 40/70
 745c3d5
+Sun Apr 10 23:59:12 UTC 2022: 
+ hashmap.c | 14 +++++++++++++-
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+test.c: In function ‘eraseMap’:
+hashmap.c:87:15: error: ‘i’ is used uninitialized in this function [-Werror=uninitialized]
+   map->buckets[i]->key=NULL;
+               ^
+cc1: all warnings being treated as errors
+Compilation failed
+0453245

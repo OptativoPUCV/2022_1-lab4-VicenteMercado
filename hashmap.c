@@ -80,9 +80,12 @@ HashMap * createMap(long capacity) {
   return mapa;
 }
 
-void eraseMap(HashMap * map,  char * key) {    
+void eraseMap(HashMap * map,  char * key) {  
+  int i;
 
-
+  
+  map->buckets[i]->key=NULL;
+  map->size -= 1;
 }
 
 Pair * searchMap(HashMap * map,  char * key) {
@@ -114,6 +117,15 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-
+  int cont;
+  cont = map->current;
+  if(cont == map->capacity-1){
     return NULL;
+  }
+  while(map->buckets[cont]==NULL || map->buckets[cont]->key == NULL){
+    cont=(cont+1)%map->capacity;
+  }
+
+  map->current = cont;
+  return map->buckets[cont];
 }
