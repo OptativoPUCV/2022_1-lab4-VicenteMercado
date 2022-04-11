@@ -266,3 +266,17 @@ Mon Apr 11 01:07:50 UTC 2022:
  1 file changed, 2 insertions(+), 2 deletions(-)
  tests:  0|0
 daf6005
+Mon Apr 11 01:11:30 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:71:19: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+   Pair* oldBuck = map->buckets;
+                   ^~~
+hashmap.c:80:52: error: invalid type argument of ‘->’ (have ‘Pair {aka struct Pair}’)
+     insertMap(aux, map->buckets[i]->key, oldBuck[i]->value);
+                                                    ^~
+cc1: all warnings being treated as errors
+Compilation failed
+82976dc
