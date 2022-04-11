@@ -78,10 +78,10 @@ void enlarge(HashMap * map) {
 
   while(i<map->capacity/2){
     if(oldBuck[i] != NULL){
-      insertMap(map, map->buckets[i]->key, oldBuck[i]->value);
+      insertMap(map, oldBuck[i]->key, oldBuck[i]->value);
     }
     i++;
-    hash(map->buckets[i]->key,map->capacity);
+    //hash(map->buckets[i]->key,map->capacity);
   }
 }
 
