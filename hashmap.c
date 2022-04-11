@@ -80,11 +80,23 @@ HashMap * createMap(long capacity) {
   return mapa;
 }
 
-void eraseMap(HashMap * map,  char * key) {  
-  int i;
+void eraseMap(HashMap * map,  char * key) { 
+  int pos = hash(key, map->capacity);
+  while(map->buckets[pos]!=NULL){
+
+    if(is_equal(key, map->buckets[pos]->key) != 0){
+      map->current = pos;
+      break;
+    }
+    
+    if(pos==map->capacity-1){
+      pos = 0;
+    }else pos +=1;
+      
+  }  
 
   
-  map->buckets[i]->key=NULL;
+  map->buckets[pos]->key=NULL;
   map->size -= 1;
 }
 

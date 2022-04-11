@@ -179,3 +179,8 @@ hashmap.c:87:15: error: ‘i’ is used uninitialized in this function [-Werror=
 cc1: all warnings being treated as errors
 Compilation failed
 0453245
+Mon Apr 11 00:05:32 UTC 2022: 
+ hashmap.c | 16 ++++++++++++++--
+ 1 file changed, 14 insertions(+), 2 deletions(-)
+ tests:  0|0
+7051884
