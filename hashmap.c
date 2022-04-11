@@ -72,9 +72,9 @@ void enlarge(HashMap * map) {
   HashMap* aux = (HashMap*)malloc(sizeof(HashMap));
   aux->size = 0;
   aux->capacity = DobCap;
-  //aux->current =-1;
+  aux->current =-1;
 
-  int i;
+  int i=0;
 
   while(i<map->capacity/2){
     insertMap(aux, map->buckets[i]->key, oldBuck[i]->value);
