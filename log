@@ -280,3 +280,8 @@ hashmap.c:80:52: error: invalid type argument of ‘->’ (have ‘Pair {aka str
 cc1: all warnings being treated as errors
 Compilation failed
 82976dc
+Mon Apr 11 01:15:02 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+671430d

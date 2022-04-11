@@ -68,7 +68,7 @@ void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
 
   int DobCap = map->capacity * 2;
-  Pair* oldBuck = map->buckets;
+  Pair** oldBuck = map->buckets;
   HashMap* aux = (HashMap*)malloc(sizeof(HashMap));
   aux->size = 0;
   aux->capacity = DobCap;
