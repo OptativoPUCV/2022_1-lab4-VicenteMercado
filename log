@@ -285,3 +285,14 @@ Mon Apr 11 01:15:02 UTC 2022:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 671430d
+Mon Apr 11 01:22:06 UTC 2022: 
+ hashmap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:80:15: error: ‘aux’ undeclared (first use in this function)
+     insertMap(aux, map->buckets[i]->key, oldBuck[i]->value);
+               ^~~
+hashmap.c:80:15: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+f479807

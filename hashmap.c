@@ -69,10 +69,10 @@ void enlarge(HashMap * map) {
 
   int DobCap = map->capacity * 2;
   Pair** oldBuck = map->buckets;
-  HashMap* aux = (HashMap*)malloc(sizeof(HashMap));
-  aux->size = 0;
-  aux->capacity = DobCap;
-  aux->current =-1;
+  map->buckets = (Pair**)malloc(DobCap*sizeof(Pair*));
+  map->size = 0;
+  map->capacity = DobCap;
+  map->current =-1;
 
   int i=0;
 
