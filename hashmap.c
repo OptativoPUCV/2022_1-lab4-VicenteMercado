@@ -67,7 +67,20 @@ void insertMap(HashMap * map, char * key, void * value) {
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
 
+  int DobCap = map->capacity * 2;
+  Pair** oldBuck = map->buckets;
+  HashMap* aux = (HashMap*)malloc(sizeof(HashMap));
+  aux->size = 0;
+  aux->capacity = DobCap;
+  aux->current =-1;
 
+  int i;
+
+  while(i<map->capacity/2){
+    insertMap(aux, map->buckets[i]->key, oldBuck[i]->value);
+    i++;
+    hash(map->buckets[i]->key,aux->capacity);
+  }
 }
 
 
