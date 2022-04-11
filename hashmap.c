@@ -77,7 +77,7 @@ void enlarge(HashMap * map) {
   int i=0;
 
   while(i<map->capacity/2){
-    if(map->buckets[i] != NULL){
+    if(oldBuck[i] != NULL){
       insertMap(map, map->buckets[i]->key, oldBuck[i]->value);
     }
     i++;
